@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+<head>
+    <title>Financial Data Chart - All Regions</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+    <style>
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        canvas {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            user-select: none;
+            z-index: 1000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-grid"><div style="position: relative;">
+                    <div class="watermark">Yousof<p>@visa_bulletin</div>
+                    <canvas id="chart-AFRICA-4" width="300" height="200"></canvas>
+                    <div style="text-align: center; margin-top: 10px; font-size: 23px; color: #555;">
+                        This chart compares visa bulletin statistics (4th) for different fiscal years.
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var ctx = document.getElementById("chart-AFRICA-4").getContext("2d");
+                            Chart.register(ChartDataLabels);
+
+                            var myChart = new Chart(ctx, {
+                                type: "bar",
+                                data: {"labels":["2017","2018","2019","2020","2021","2022","2023","2024","2025"],"datasets":[{"label":"Year-over-Year DV Visa Bulletin Cut-off Analysis","data":["25800","13000","13100","19000","10500","13500","20000","22000","22500"],"backgroundColor":["rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)"],"borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]},
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            top: 10,
+                                            bottom: 20
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            max: 25800,
+                                            ticks: {
+                                                padding: 10,
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        },
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: "Region: AFRICA - Fiscal Month: 4th",
+                                            font: {
+                                                size: 25
+                                            },
+                                            padding: {
+                                                top: 10
+                                            }
+                                        },
+                                        datalabels: {
+                                            anchor: "end",
+                                            align: "top",
+                                            formatter: function(value, context) {
+                                                return ["25,800","13,000","13,100","19,000","10,500","13,500","20,000","22,000","22,500"][context.dataIndex];
+                                            },
+                                            font: {
+                                                weight: "bold",
+                                                size: 21
+                                            }
+                                        }
+                                    },
+                                    barThickness: 40
+                                }
+                            });
+                        });
+                    </script>
+                </div><div style="position: relative;">
+                    <div class="watermark">Yousof<p>@visa_bulletin</div>
+                    <canvas id="chart-ASIA-4" width="300" height="200"></canvas>
+                    <div style="text-align: center; margin-top: 10px; font-size: 23px; color: #555;">
+                        This chart compares visa bulletin statistics (4th) for different fiscal years.
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var ctx = document.getElementById("chart-ASIA-4").getContext("2d");
+                            Chart.register(ChartDataLabels);
+
+                            var myChart = new Chart(ctx, {
+                                type: "bar",
+                                data: {"labels":["2017","2018","2019","2020","2021","2022","2023","2024","2025"],"datasets":[{"label":"Year-over-Year DV Visa Bulletin Cut-off Analysis","data":["4000","3400","3800","8200","4300","6000","9000","5500","5500"],"backgroundColor":["rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)"],"borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]},
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            top: 10,
+                                            bottom: 20
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            max: 9000,
+                                            ticks: {
+                                                padding: 10,
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        },
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: "Region: ASIA - Fiscal Month: 4th",
+                                            font: {
+                                                size: 25
+                                            },
+                                            padding: {
+                                                top: 10
+                                            }
+                                        },
+                                        datalabels: {
+                                            anchor: "end",
+                                            align: "top",
+                                            formatter: function(value, context) {
+                                                return ["4,000","3,400","3,800","8,200","4,300","6,000","9,000","5,500","5,500"][context.dataIndex];
+                                            },
+                                            font: {
+                                                weight: "bold",
+                                                size: 21
+                                            }
+                                        }
+                                    },
+                                    barThickness: 40
+                                }
+                            });
+                        });
+                    </script>
+                </div><div style="position: relative;">
+                    <div class="watermark">Yousof<p>@visa_bulletin</div>
+                    <canvas id="chart-EUROPE-4" width="300" height="200"></canvas>
+                    <div style="text-align: center; margin-top: 10px; font-size: 23px; color: #555;">
+                        This chart compares visa bulletin statistics (4th) for different fiscal years.
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var ctx = document.getElementById("chart-EUROPE-4").getContext("2d");
+                            Chart.register(ChartDataLabels);
+
+                            var myChart = new Chart(ctx, {
+                                type: "bar",
+                                data: {"labels":["2017","2018","2019","2020","2021","2022","2023","2024","2025"],"datasets":[{"label":"Year-over-Year DV Visa Bulletin Cut-off Analysis","data":["15900","8200","8800","10300","7500","10000","15000","12000","12000"],"backgroundColor":["rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)"],"borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]},
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            top: 10,
+                                            bottom: 20
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            max: 15900,
+                                            ticks: {
+                                                padding: 10,
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        },
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: "Region: EUROPE - Fiscal Month: 4th",
+                                            font: {
+                                                size: 25
+                                            },
+                                            padding: {
+                                                top: 10
+                                            }
+                                        },
+                                        datalabels: {
+                                            anchor: "end",
+                                            align: "top",
+                                            formatter: function(value, context) {
+                                                return ["15,900","8,200","8,800","10,300","7,500","10,000","15,000","12,000","12,000"][context.dataIndex];
+                                            },
+                                            font: {
+                                                weight: "bold",
+                                                size: 21
+                                            }
+                                        }
+                                    },
+                                    barThickness: 40
+                                }
+                            });
+                        });
+                    </script>
+                </div><div style="position: relative;">
+                    <div class="watermark">Yousof<p>@visa_bulletin</div>
+                    <canvas id="chart-NORTH AMERICA (BAHAMAS)-4" width="300" height="200"></canvas>
+                    <div style="text-align: center; margin-top: 10px; font-size: 23px; color: #555;">
+                        This chart compares visa bulletin statistics (4th) for different fiscal years.
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var ctx = document.getElementById("chart-NORTH AMERICA (BAHAMAS)-4").getContext("2d");
+                            Chart.register(ChartDataLabels);
+
+                            var myChart = new Chart(ctx, {
+                                type: "bar",
+                                data: {"labels":["2017","2018","2019","2020","2021","2022","2023","2024","2025"],"datasets":[{"label":"Year-over-Year DV Visa Bulletin Cut-off Analysis","data":["6","5","12","8","4","6","5","5","20"],"backgroundColor":["rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)"],"borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]},
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            top: 10,
+                                            bottom: 20
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            max: 20,
+                                            ticks: {
+                                                padding: 10,
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        },
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: "Region: NORTH AMERICA (BAHAMAS) - Fiscal Month: 4th",
+                                            font: {
+                                                size: 25
+                                            },
+                                            padding: {
+                                                top: 10
+                                            }
+                                        },
+                                        datalabels: {
+                                            anchor: "end",
+                                            align: "top",
+                                            formatter: function(value, context) {
+                                                return ["6","5","12","8","4","6","5","5","20"][context.dataIndex];
+                                            },
+                                            font: {
+                                                weight: "bold",
+                                                size: 21
+                                            }
+                                        }
+                                    },
+                                    barThickness: 40
+                                }
+                            });
+                        });
+                    </script>
+                </div><div style="position: relative;">
+                    <div class="watermark">Yousof<p>@visa_bulletin</div>
+                    <canvas id="chart-OCEANIA-4" width="300" height="200"></canvas>
+                    <div style="text-align: center; margin-top: 10px; font-size: 23px; color: #555;">
+                        This chart compares visa bulletin statistics (4th) for different fiscal years.
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var ctx = document.getElementById("chart-OCEANIA-4").getContext("2d");
+                            Chart.register(ChartDataLabels);
+
+                            var myChart = new Chart(ctx, {
+                                type: "bar",
+                                data: {"labels":["2017","2018","2019","2020","2021","2022","2023","2024","2025"],"datasets":[{"label":"Year-over-Year DV Visa Bulletin Cut-off Analysis","data":["650","475","350","1200","600","650","650","650","1100"],"backgroundColor":["rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)"],"borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]},
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            top: 10,
+                                            bottom: 20
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            max: 1200,
+                                            ticks: {
+                                                padding: 10,
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        },
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: "Region: OCEANIA - Fiscal Month: 4th",
+                                            font: {
+                                                size: 25
+                                            },
+                                            padding: {
+                                                top: 10
+                                            }
+                                        },
+                                        datalabels: {
+                                            anchor: "end",
+                                            align: "top",
+                                            formatter: function(value, context) {
+                                                return ["650","475","350","1,200","600","650","650","650","1,100"][context.dataIndex];
+                                            },
+                                            font: {
+                                                weight: "bold",
+                                                size: 21
+                                            }
+                                        }
+                                    },
+                                    barThickness: 40
+                                }
+                            });
+                        });
+                    </script>
+                </div><div style="position: relative;">
+                    <div class="watermark">Yousof<p>@visa_bulletin</div>
+                    <canvas id="chart-SOUTH AMERICA, and the CARIBBEAN-4" width="300" height="200"></canvas>
+                    <div style="text-align: center; margin-top: 10px; font-size: 23px; color: #555;">
+                        This chart compares visa bulletin statistics (4th) for different fiscal years.
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var ctx = document.getElementById("chart-SOUTH AMERICA, and the CARIBBEAN-4").getContext("2d");
+                            Chart.register(ChartDataLabels);
+
+                            var myChart = new Chart(ctx, {
+                                type: "bar",
+                                data: {"labels":["2017","2018","2019","2020","2021","2022","2023","2024","2025"],"datasets":[{"label":"Year-over-Year DV Visa Bulletin Cut-off Analysis","data":["775","500","550","1075","750","900","1200","1000","1750"],"backgroundColor":["rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)","rgba(75, 192, 192, 0.2)"],"borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]},
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            top: 10,
+                                            bottom: 20
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            max: 1750,
+                                            ticks: {
+                                                padding: 10,
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        },
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 21
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: "Region: SOUTH AMERICA, and the CARIBBEAN - Fiscal Month: 4th",
+                                            font: {
+                                                size: 25
+                                            },
+                                            padding: {
+                                                top: 10
+                                            }
+                                        },
+                                        datalabels: {
+                                            anchor: "end",
+                                            align: "top",
+                                            formatter: function(value, context) {
+                                                return ["775","500","550","1,075","750","900","1,200","1,000","1,750"][context.dataIndex];
+                                            },
+                                            font: {
+                                                weight: "bold",
+                                                size: 21
+                                            }
+                                        }
+                                    },
+                                    barThickness: 40
+                                }
+                            });
+                        });
+                    </script>
+                </div></div>
+    <script>
+    setTimeout(() => {
+    html2canvas(document.querySelector(".chart-grid"), {
+        scale: 2,
+        logging: true,
+        useCORS: true
+    }).then(canvas => {
+        var ctx = canvas.getContext("2d");
+
+        // اضافه کردن واترمارک "DVBULLETIN" در وسط کل عکس با استفاده از روش دقیق‌تر
+        var text = "@visa_bulletin";
+        var fontSize = 72;
+        ctx.font = `bold ${fontSize}px Arial`;
+        ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        // محاسبه مختصات صحیح برای مرکز تصویر
+        var x = canvas.width / 4;
+        var y = canvas.height / 4;
+        
+        ctx.fillText(text, x, y);
+
+        var imgData = canvas.toDataURL("image/png", 1.0);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "send_to_telegram.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("imgBase64=" + encodeURIComponent(imgData) + "&fileName=" + encodeURIComponent("chart_all_regions"));
+    });
+}, 20000);
+</script>
+</body>
+</html>
